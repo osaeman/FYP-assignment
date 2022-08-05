@@ -1,0 +1,1561 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,900&display=swap");
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", "sans-serif";
+  overflow-x: hidden;
+}
+
+/*---------------------------GENERAL STYLING--------------------------- */
+/* ------------------navbar---------------- */
+.navbar_section {
+  width: 100%;
+  /* background-color: #f4f7f6; */
+  background-image: linear-gradient(to left, #abbaab, #ffffff);
+  /* background-color: #a1aea5; */
+}
+
+.navbar_flex {
+  width: 100%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.navbar_logo {
+  width: 45px;
+  height: 45px;
+  margin-top: 10px;
+}
+
+.navbar_logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.navbar_company_name {
+  font-size: 28px;
+  line-height: 27px;
+  font-weight: 500;
+  color: rgba(0, 0, 0, 0.8);
+  margin: 10px 0;
+}
+.navbar_menu {
+  /* background-color: #202121; */
+  width: 100%;
+  border-radius: 3px;
+}
+.navbar_menu ul {
+  display: flex;
+  list-style: none;
+  flex-direction: row;
+  margin: 0;
+  padding: 0 0;
+  justify-content: center;
+}
+
+.navbar_menu ul li a {
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 400;
+  /* color: #f4f7f6; */
+  color: #202121;
+}
+.navbar_menu ul li {
+  margin: 0 8px;
+  padding: 10px 5px;
+  background-color: transparent;
+}
+.navbar_menu ul li:hover {
+  border-bottom: 1px solid #202121;
+  cursor: pointer;
+  /* transition: all 0.4s ease-in;
+  background-color: rgba(0, 0, 0, 0.05); */
+}
+
+/* .navbar_menu ul li:hover {
+  background-color: #f4f7f6;
+}
+.navbar_menu ul li a:hover {
+  color: #202121;
+} */
+
+/* ---------------------Mobile Version Navbar---------------------- */
+.navbar_section_mobile {
+  width: 100%;
+  /* background-color: #f4f7f6; */
+  background-image: linear-gradient(to left, #abbaab, #ffffff);
+  display: none;
+}
+
+.hamburger_icon {
+  color: var(--primary-color);
+  font-size: 22px;
+  margin: 10px 0;
+}
+
+.hamburger_menu {
+  background-color: var(--primary-color);
+  height: 0;
+  margin: auto;
+  overflow: hidden;
+  width: 75%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
+  z-index: 16;
+  border-radius: 2px;
+}
+
+.hamburger_menu2 {
+  height: 170px;
+}
+
+.hamburger_menu ul {
+  list-style: none;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+
+.hamburger_menu ul li {
+  margin: 5px 0;
+}
+
+.hamburger_menu ul li a {
+  text-decoration: none;
+  color: white;
+}
+
+.hamburger_menu ul li a:hover {
+  text-decoration: underline;
+}
+
+/* ---------------------Footer-------------------- */
+.footer_section {
+  width: 100%;
+  background-color: #a1aea5;
+  margin-top: 100px;
+}
+
+.footer_flexbox {
+  width: 80%;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+  padding: 50px 0;
+}
+
+.footer_follow_section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 50%;
+}
+.footer_follow_section h2 {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  white-space: nowrap;
+  display: block;
+  text-orientation: sideways;
+  letter-spacing: 2px;
+  font-size: 22px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-left: 2px solid #1a6692;
+}
+
+.footer_follow_section div span i {
+  font-size: 25px;
+  margin: 5px 5px;
+  padding: 15px 15px;
+  border-radius: 4px;
+  color: #202121;
+  background-color: #f7f7f7;
+  opacity: 1;
+  filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07))
+    drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
+}
+.footer_follow_section div span i:hover {
+  transition: all 0.7s ease-in-out;
+  opacity: 0.7;
+  color: #f7f7f7;
+  background-color: #202121;
+  cursor: pointer;
+}
+
+.footer_address_section {
+  display: flex;
+  flex-direction: row;
+  align-self: flex-end;
+  justify-content: right;
+  align-items: center;
+  width: 50%;
+}
+
+.footer_address_section h2 {
+  writing-mode: vertical-rl;
+  white-space: nowrap;
+  margin: 0;
+  text-orientation: sideways;
+  letter-spacing: 4px;
+  font-size: 22px;
+  font-weight: 600;
+  text-transform: uppercase;
+  border-left: 2px solid #1a6692;
+}
+
+.footer_address_section p {
+  color: #f7f7f7;
+  padding: 0 25px;
+  margin: 0;
+  border-radius: 4px;
+  font-size: 20px;
+  line-height: 24px;
+  text-align: right;
+}
+
+.footer_copyright {
+  width: 80%;
+  margin: 15px auto 0 auto;
+  text-align: center;
+  font-size: 18px;
+  padding: 30px;
+  line-height: 21px;
+  /* border-top: 1px solid #1a6692; */
+}
+/* --------------------Main Page / Index page------------------------- */
+/* -------------------Welcome to our compnay------------------- */
+.welcome_section {
+  width: 100%;
+  position: relative;
+}
+
+.hero_image {
+  width: 100%;
+  height: 90vh;
+}
+
+.hero_image img {
+  width: 100%;
+  height: 90vh;
+  object-position: center;
+  object-fit: cover;
+}
+.hero_image::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.45);
+  transition: all 0.2s ease-in-out;
+}
+
+.hero_image:hover::before {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.hero_content {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%);
+}
+
+.hero_content h2 {
+  font-size: 60px;
+  color: #f7f7f7;
+  width: 40%;
+  line-height: 58px;
+  opacity: 0.8;
+  transform: translateX(0);
+  transition: transform 0.4s ease-in-out;
+}
+.hero_content h2:hover {
+  opacity: 1;
+  transform: translateX(20px);
+}
+
+.hero_content span {
+  font-size: 60px;
+  color: #abbaab;
+  line-height: 58px;
+}
+/* -------------------Our Company Section----------------- */
+.our_company_section {
+  width: 80%;
+  margin: 60px auto;
+}
+
+.our_company_flexbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.our_company_content {
+  padding-right: 30px;
+}
+
+.our_company_content h2 {
+  font-size: 28px;
+  font-weight: 400;
+  margin: 0;
+  border-bottom: 1px solid #d3d3d3;
+  padding-bottom: 5px;
+  line-height: 32px;
+}
+.our_company_img {
+  width: fit-content;
+  height: fit-content;
+  filter: drop-shadow(0 4px 3px rgb(161 174 165 / 0.77))
+    drop-shadow(0 2px 2px rgb(161 174 165 / 0.56));
+}
+
+.our_company_img img {
+  width: 380px;
+  height: 380px;
+  object-fit: cover;
+  object-position: center;
+
+  clip-path: polygon(
+    20% 0%,
+    80% 0%,
+    100% 20%,
+    100% 80%,
+    80% 100%,
+    20% 100%,
+    0% 80%,
+    0% 20%
+  );
+}
+/* ----------- Apply to work with us section--------------- - */
+.apply_work_section {
+  width: 80%;
+  margin: 80px auto;
+}
+
+.apply_work_flexbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.apply_work_content {
+  padding-left: 40px;
+  width: 100%;
+}
+
+.apply_work_content h2 {
+  font-size: 28px;
+  font-weight: 400;
+  margin: 0;
+  border-bottom: 1px solid #d3d3d3;
+  padding-bottom: 5px;
+  line-height: 32px;
+}
+.apply_work_img {
+  width: fit-content;
+  height: fit-content;
+  filter: drop-shadow(0 4px 3px rgb(161 174 165 / 0.77))
+    drop-shadow(0 2px 2px rgb(161 174 165 / 0.56));
+}
+
+.apply_work_img img {
+  width: 380px;
+  height: 380px;
+  object-fit: cover;
+  object-position: center;
+
+  clip-path: polygon(
+    20% 0%,
+    80% 0%,
+    100% 20%,
+    100% 80%,
+    80% 100%,
+    20% 100%,
+    0% 80%,
+    0% 20%
+  );
+}
+
+/* ------------- Meet the team------------------ */
+
+.meet_team_section {
+  width: 80%;
+  margin: 60px auto;
+}
+
+.meet_team_flexbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.meet_team_content {
+  padding-right: 30px;
+}
+
+.meet_team_content h2 {
+  font-size: 28px;
+  font-weight: 400;
+  margin: 0;
+  border-bottom: 1px solid #d3d3d3;
+  padding-bottom: 5px;
+  line-height: 32px;
+}
+.meet_team_img {
+  width: fit-content;
+  height: fit-content;
+  filter: drop-shadow(0 4px 3px rgb(161 174 165 / 0.77))
+    drop-shadow(0 2px 2px rgb(161 174 165 / 0.56));
+}
+
+.meet_team_img img {
+  width: 380px;
+  height: 380px;
+  object-fit: cover;
+  object-position: center;
+
+  clip-path: polygon(
+    20% 0%,
+    80% 0%,
+    100% 20%,
+    100% 80%,
+    80% 100%,
+    20% 100%,
+    0% 80%,
+    0% 20%
+  );
+}
+/* ------------------------(OUR TEAM PAGE)-------------------------- */
+/* ---------------Team Members Section---------- */
+.team_members_section {
+  margin-top: 100px;
+}
+
+.team_members_outercontainer {
+  width: 80%;
+  margin: auto;
+}
+.team_members_outercontainer > h1 {
+  font-size: 28px;
+  font-weight: 400;
+  border-bottom: 1px solid #d3d3d3;
+  margin: 0;
+  padding-bottom: 10px;
+  line-height: 29px;
+}
+
+.team_member_card {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  background-color: #f7f7f7;
+  border-radius: 5px;
+  filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07))
+    drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
+  overflow: hidden;
+}
+.team_member_card_odd {
+  justify-content: flex-start;
+}
+.team_member_card_even {
+  justify-content: flex-end;
+}
+
+.team_member_img_odd {
+  min-width: 270px;
+  height: 40vh;
+  overflow: hidden;
+  margin: 30px 0;
+}
+
+.team_member_img_odd img {
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+  margin-left: -40px;
+}
+
+.team_member_img_even {
+  min-width: 270px;
+  height: 40vh;
+  overflow: hidden;
+  margin: 30px 0;
+  margin-right: -40px;
+}
+
+.team_member_img_even img {
+  height: 100%;
+  width: 100%;
+  border-radius: 100%;
+}
+
+.team_member_content {
+  width: 75%;
+  height: fit-content;
+}
+.team_member_content_even {
+  padding: 30px 0 30px 40px;
+}
+.team_member_content_odd {
+  padding: 30px 40px 30px 0;
+}
+
+.team_member_name {
+  font-size: 32px;
+  font-weight: 600;
+  margin: 0;
+  color: #1a6692;
+  line-height: 32px;
+}
+
+.team_member_position {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-weight: 500;
+  vertical-align: middle;
+  color: #1a6692;
+  line-height: 18px;
+}
+
+.team_member_time {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 10px;
+  line-height: 20px;
+}
+.team_member_des {
+  text-align: justify;
+}
+
+/* -------------------------ABOUT US PAGE------------------------ */
+/* -- -----------------Company's history------------------- -- */
+.history_section {
+  margin: 80px auto;
+  width: 80%;
+}
+
+.history_section h2 {
+  font-size: 28px;
+  font-weight: 400;
+  border-bottom: 1px solid #d3d3d3;
+  margin: 0;
+  padding-bottom: 10px;
+  line-height: 29px;
+}
+
+.history_section div p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 22px;
+}
+/* ------------------------about us section--------------------- */
+.about_section {
+  margin: 80px auto;
+  width: 80%;
+}
+
+.about_section h2 {
+  font-size: 28px;
+  font-weight: 400;
+  border-bottom: 1px solid #d3d3d3;
+  margin: 0;
+  padding-bottom: 10px;
+  line-height: 29px;
+}
+
+.about_flexbox {
+  display: flex;
+  flex-direction: row;
+}
+
+.about_flexbox_left {
+  width: 55%;
+  padding-right: 10px;
+  padding: 20px 10px 50px 0;
+}
+
+.about_flexbox_left div h4 {
+  font-weight: 500;
+  color: #1a6692;
+}
+
+.about_flexbox_left div p {
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 22px;
+}
+.about_flexbox_left div ul {
+  padding-left: 20px;
+  margin-bottom: 40px;
+}
+
+.read_more_button {
+  text-decoration: none;
+  color: #1a6692;
+  background-color: #f7f7f7;
+  filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07))
+    drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
+  padding: 10px 10px;
+  border-radius: 5px;
+}
+.read_more_button:hover {
+  background-color: #1a6692;
+  color: #f7f7f7;
+}
+.about_flexbox_left div ul li a {
+  text-decoration: none;
+  color: black;
+  font-size: 15;
+  font-weight: 300;
+  background-color: white;
+  filter: none;
+}
+
+.about_flexbox_right {
+  width: 45%;
+  align-self: flex-end;
+}
+
+.about_flexbox_right div {
+  background-image: url("../images/pexels-thisisengineering-3861958.jpg");
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 410px;
+  margin-left: auto;
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 29% 100%);
+}
+
+/* ----------------stats section----------------- */
+.stats_section {
+  width: 100%;
+  /* background-color: #f7f7f7; */
+  background-image: linear-gradient(to left, #abbaab, #ffffff);
+  margin-bottom: 100px;
+  padding: 30px 0;
+}
+
+.stats_flexbox {
+  margin: auto;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stats_content {
+  width: 40%;
+  padding-right: 15px;
+  text-align: justify;
+}
+.stats_content h2 {
+  font-size: 28px;
+  font-weight: 400;
+  border-bottom: 1px solid #d3d3d3;
+  margin: 0;
+  padding-bottom: 10px;
+  line-height: 29px;
+}
+
+.stats_img {
+  min-width: 300px;
+  max-width: 400px;
+  height: 45vh;
+  margin: auto;
+}
+
+.stats_img img {
+  height: 100%;
+  width: 100%;
+  padding: 30px 0;
+}
+.stats_one_image {
+  margin: 0 20px 0 20px;
+  filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.1))
+    drop-shadow(0 2px 2px rgb(0 0 0 / 0.1));
+}
+.stats_vertical_section {
+  display: flex;
+  flex-direction: column;
+  filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.1))
+    drop-shadow(0 2px 2px rgb(0 0 0 / 0.1));
+}
+
+/* ----------------CONTTACT US PAGE----------------- */
+/* ----------Our Location Section------------  */
+.ourlocation_section {
+  padding: 60px 0;
+  width: 80%;
+  margin: auto;
+}
+.ourlocation_heading {
+  border-bottom: 1px solid #d3d3d3;
+  padding-bottom: 5px;
+}
+.ourlocation_heading h2 {
+  font-size: 28px;
+  font-weight: 400;
+  margin: 0;
+}
+
+.ourlocation_flexbox {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.ourlocation_map_container {
+  width: 55%;
+  height: 340px;
+}
+
+.ourlocation_map_container iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.ourlocation_content {
+  width: 45%;
+  padding: 0 10px 0 50px;
+  align-self: flex-start;
+}
+.ourlocation_content h2 {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 20.4px;
+  color: #1a6692;
+}
+
+.ourlocation_content p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+/* -------------Send Us Message------------ */
+.sendmessage_section {
+  margin: 40px auto 40px auto;
+  width: 80%;
+}
+.sendmessage_heading {
+  border-bottom: 1px solid #d3d3d3;
+  padding-bottom: 5px;
+}
+.sendmessage_heading h2 {
+  font-size: 28px;
+  font-weight: 400;
+  margin: 0;
+}
+.form_section {
+  margin-top: 40px;
+  width: 60%;
+}
+
+.form_section form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form_section form input {
+  outline: none;
+  padding: 12px 15px;
+  font-size: 15px;
+  border: 1px solid #d3d3d3;
+  margin-bottom: 20px;
+}
+.form_section form textarea {
+  outline: none;
+  padding: 12px 15px;
+  font-size: 15px;
+  border: 1px solid #d3d3d3;
+  margin-bottom: 20px;
+}
+.form_section form textarea::placeholder {
+  font-family: "Poppins", "sans-serif";
+}
+
+.send_btn {
+  background-color: #1a6692;
+  width: fit-content;
+  padding: 8px 14px;
+  border-radius: 4px;
+  font-size: 14px;
+  color: white;
+}
+.send_btn:hover {
+  cursor: pointer;
+  color: #1a6692;
+  border: 1px solid #1a6692;
+  background: transparent;
+}
+
+/*  ---------contact us at --------*/
+.contact_icons_section {
+  margin: 70px auto;
+  width: 80%;
+}
+
+.contact_icons_section h2 {
+  font-size: 28px;
+  font-weight: 400;
+  border-bottom: 1px solid #d3d3d3;
+  margin: 0;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  line-height: 29px;
+}
+
+.contact_icons_stack a {
+  font-size: 18px;
+  color: #f7f7f7;
+  margin: 0 5px 10px 5px;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 47px;
+  height: 47px;
+  border-radius: 2px;
+  transform: translateY(0);
+  transition: transform 0.4s ease-in-out;
+}
+
+.contact_icons_stack a:hover {
+  transform: translateY(-10px);
+}
+
+/* -------- application form section ----------- */
+.job_application_section {
+  margin: 80px auto 40px auto;
+  width: 80%;
+}
+
+.job_application_section h2 {
+  font-size: 28px;
+  font-weight: 400;
+  border-bottom: 1px solid #d3d3d3;
+  margin: 0;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  line-height: 29px;
+}
+
+.form_section select {
+  outline: none;
+  padding: 12px 15px;
+  font-size: 15px;
+  border: 1px solid #d3d3d3;
+  margin-bottom: 20px;
+}
+.checkbox_input {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 20px 0;
+}
+
+.checkbox_label {
+  margin: 0 0 0 10px;
+}
+
+.close_btn a {
+  background-color: #1a6692;
+  width: fit-content;
+  padding: 8px 14px;
+  border-radius: 4px;
+  font-size: 14px;
+  color: white;
+  margin: 0 20px;
+  text-decoration: none;
+}
+
+.close_btn a:hover {
+  cursor: pointer;
+  color: #1a6692;
+  border: 1px solid #1a6692;
+  background: transparent;
+}
+
+.form_btns {
+  margin: 20px 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+/* ---------------------------------Courses Page----------------------------- */
+/* --------------------courses catalogue section */
+.course_section {
+  width: 80%;
+  margin: 80px auto;
+}
+
+.course_section h2 {
+  font-size: 28px;
+  font-weight: 400;
+  border-bottom: 1px solid #d3d3d3;
+  margin: 0;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  line-height: 29px;
+}
+.course_section p {
+  line-height: 23px;
+}
+.course_section ul {
+  color: #1a6692;
+}
+
+.course_section ul li a {
+  text-decoration: none;
+  color: #1a6692;
+  font-size: 18px;
+}
+
+.course_section ul li a:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+/* <!-- begineer section and intermediate section --> */
+
+.difficulty_level_section {
+  width: 80%;
+  margin: 60px auto;
+}
+
+.difficulty_level_section h2 {
+  font-size: 28px;
+  font-weight: 400;
+  border-bottom: 1px solid #d3d3d3;
+  margin: 0;
+  margin-bottom: 15px;
+  padding-bottom: 10px;
+  line-height: 29px;
+}
+
+.difficulty_level_flexbox {
+  display: flex;
+  flex-direction: row;
+}
+
+.difficulty_level_des {
+  width: 65%;
+  padding-right: 20px;
+}
+
+.requirements_block {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #202121;
+  color: #f7f7f7;
+  border-radius: 5px;
+  padding: 30px 25px;
+  text-align: center;
+}
+
+.apply_btn {
+  width: fit-content;
+}
+.apply_btn a {
+  background-color: #1a6692;
+  color: white;
+  padding: 8px 14px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.apply_btn a:hover {
+  cursor: pointer;
+  color: #1a6692;
+  border: 1px solid #1a6692;
+  background: transparent;
+}
+
+/* -----------------------Job Vacancies page------------------------ */
+/*-------------- job vacancy section----------- */
+.job_vacancy_section {
+  width: 80%;
+  margin: 80px auto 50px auto;
+}
+.job_vacancy_section h2 {
+  font-size: 28px;
+  font-weight: 400;
+  border-bottom: 1px solid #d3d3d3;
+  margin: 0;
+  padding-bottom: 10px;
+  line-height: 29px;
+}
+
+.job_vacancy_block {
+  width: 80%;
+  margin: 0 auto 50px auto;
+  background-color: #f7f7f7;
+  padding: 20px 40px;
+  position: relative;
+}
+
+.job_vacancy_block h2 {
+  font-size: 22px;
+  font-weight: 600;
+  color: #1a6692;
+  line-height: 25px;
+}
+.job_apply_btn {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  transition: all 0.3s ease-in-out;
+}
+
+.job_apply_btn a {
+  text-decoration: none;
+  color: #f7f7f7;
+  background-color: #202121;
+  padding: 10px 20px;
+  filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.1))
+    drop-shadow(0 2px 2px rgb(0 0 0 / 0.1));
+
+  transition: transform 0.3s ease-in-out;
+}
+
+.job_apply_btn:hover {
+  right: -10px;
+}
+
+@media (max-width: 1000px) {
+  /* -------------index page------------- */
+  /* -------- Apply to work with us section--------- */
+  .apply_work_img img {
+    width: 300px;
+    height: 300px;
+  }
+  /* -------- meet team section--------- */
+  .meet_team_img img {
+    width: 300px;
+    height: 300px;
+  }
+  /* -------- our company section--------- */
+  .our_company_img img {
+    width: 300px;
+    height: 300px;
+  }
+  /*------------------ about Us ---------------- */
+  /* ---------About Us Section----------- */
+  .about_section {
+    margin: 60px auto;
+  }
+  .about_flexbox {
+    flex-direction: column;
+  }
+
+  .about_flexbox_left {
+    width: 100%;
+    padding: 5px 0 40px 0;
+  }
+  .about_flexbox_right {
+    width: 100%;
+  }
+
+  .about_flexbox_left div h4 {
+    margin: 0;
+  }
+
+  .about_flexbox_right div {
+    height: 340px;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 19% 100%);
+  }
+
+  /* ----------------stats section----------------- */
+  .stats_one_image {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  /* ---------------------Footer-------------------- */
+  .footer_section {
+    margin-top: 80px;
+  }
+
+  .footer_flexbox {
+    flex-direction: column;
+    padding: 50px 0;
+  }
+
+  .footer_follow_section {
+    width: 100%;
+  }
+
+  .footer_address_section {
+    width: 100%;
+  }
+  /* --------------------- Navbar---------------------- */
+  .navbar_section {
+    display: none;
+  }
+
+  /* ---------------------Mobile Version Navbar---------------------- */
+  .navbar_section_mobile {
+    display: block;
+  }
+
+  /* ------------------------- index page-------------------- */
+  /* -------------------Welcome to our compnay------------------- */
+
+  .hero_image {
+    height: 70vh;
+  }
+
+  .hero_image img {
+    height: 70vh;
+  }
+
+  .hero_content h2 {
+    font-size: 55px;
+    width: 80%;
+  }
+
+  .hero_content span {
+    font-size: 55px;
+  }
+
+  /* -------------------Our Company Section----------------- */
+  .our_company_flexbox {
+    flex-direction: column;
+  }
+
+  .our_company_content {
+    padding: 0;
+  }
+  .our_company_content h2 {
+    font-size: 25px;
+  }
+  .our_company_img {
+    width: 100%;
+    text-align: left;
+  }
+
+  .our_company_img img {
+    width: 80%;
+    height: 280px;
+  }
+  /*  ---------apply for a job section--------- */
+  .apply_work_flexbox {
+    flex-direction: column-reverse;
+  }
+  .apply_work_content {
+    padding: 0;
+  }
+  .apply_work_content h2 {
+    font-size: 25px;
+  }
+  .apply_work_img {
+    width: 100%;
+    text-align: right;
+  }
+
+  .apply_work_img img {
+    width: 80%;
+    height: 280px;
+  }
+  /* ----------meet team section-------- */
+  .meet_team_flexbox {
+    flex-direction: column;
+  }
+  .meet_team_content {
+    padding: 0;
+  }
+  .meet_team_content h2 {
+    font-size: 25px;
+  }
+  .meet_team_img {
+    width: 100%;
+    text-align: left;
+  }
+
+  .meet_team_img img {
+    width: 80%;
+    height: 280px;
+  }
+  /* ------------------------(OUR TEAM PAGE)-------------------------- */
+  /* <!-- ----------Team Members Section-------- --> */
+  .team_members_section {
+    margin-top: 70px;
+  }
+  .team_members_outercontainer > h1 {
+    font-size: 25px;
+  }
+
+  .team_member_card {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+  }
+
+  .team_member_card_even {
+    flex-direction: column-reverse;
+  }
+
+  .team_member_img_odd {
+    min-width: 230px;
+    height: 35vh;
+    overflow: visible;
+    margin: 30px 0 0 0;
+  }
+
+  .team_member_img_odd img {
+    margin-left: 0;
+  }
+
+  .team_member_img_even {
+    min-width: 230px;
+    height: 35vh;
+    overflow: visible;
+    margin: 30px 0 0 0;
+    margin-right: 0;
+  }
+
+  .team_member_content {
+    width: 100%;
+  }
+  .team_member_content_even {
+    padding: 30px 30px 30px 30px;
+  }
+  .team_member_content_odd {
+    padding: 30px 30px 30px 30px;
+  }
+
+  .team_member_name {
+    font-size: 28px;
+  }
+
+  .team_member_position {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  /* ---------------------------------Courses Page----------------------------- */
+  /* ---------courses catalogue section ------------*/
+  .course_section h2 {
+    font-size: 25px;
+  }
+  .course_section {
+    width: 80%;
+    margin: 60px auto;
+  }
+
+  .course_section p {
+    text-align: justify;
+  }
+
+  /* <!-- begineer section and intermediate section --> */
+  .difficulty_level_section h2 {
+    margin-bottom: 0;
+    font-size: 25px;
+  }
+  .difficulty_level_flexbox {
+    display: flex;
+    flex-direction: column;
+  }
+  .difficulty_level_des {
+    width: 100%;
+    padding: 0;
+    text-align: justify;
+    margin-bottom: 15px;
+  }
+
+  .requirements_block {
+    width: 100%;
+    padding: 20px 18px;
+  }
+  .requirements_block h3 {
+    margin: 0;
+  }
+  /*-------------- job vacancy section----------- */
+  .job_vacancy_section {
+    width: 85%;
+    margin: 60px auto 40px auto;
+  }
+  .job_vacancy_section h2 {
+    font-size: 25px;
+    margin-bottom: 0;
+  }
+
+  .job_vacancy_block {
+    padding: 20px 27px;
+    width: 85%;
+  }
+  .job_vacancy_block p {
+    text-align: justify;
+  }
+  /* -------- application form section ----------- */
+  .job_application_section {
+    margin: 60px auto 40px auto;
+    width: 80%;
+  }
+
+  .job_application_section h2 {
+    font-size: 25px;
+    margin-bottom: 0;
+  }
+
+  /* ----------------CONTTACT US PAGE----------------- */
+  /* ----------Our Location Section------------  */
+
+  .ourlocation_heading h2 {
+    font-size: 25px;
+  }
+
+  .ourlocation_map_container {
+    width: 60%;
+    height: 320px;
+  }
+
+  .ourlocation_content {
+    width: 40%;
+    padding: 0 10px 0 30px;
+  }
+
+  /* -------------Send Us Message------------ */
+  .sendmessage_section {
+    margin: 40px auto 40px auto;
+    width: 80%;
+  }
+  .sendmessage_heading {
+    border-bottom: 1px solid #d3d3d3;
+    padding-bottom: 5px;
+  }
+  .sendmessage_heading h2 {
+    font-size: 28px;
+    font-weight: 400;
+    margin: 0;
+  }
+  .form_section {
+    margin-top: 40px;
+    width: 85%;
+  }
+
+  .form_section form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .form_section form input {
+    outline: none;
+    padding: 12px 15px;
+    font-size: 15px;
+    border: 1px solid #d3d3d3;
+    margin-bottom: 20px;
+  }
+  .form_section form textarea {
+    outline: none;
+    padding: 12px 15px;
+    font-size: 15px;
+    border: 1px solid #d3d3d3;
+    margin-bottom: 20px;
+  }
+  .form_section form textarea::placeholder {
+    font-family: "Poppins", "sans-serif";
+  }
+
+  .send_btn {
+    background-color: #1a6692;
+    width: fit-content;
+    padding: 8px 14px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: white;
+  }
+  .send_btn:hover {
+    cursor: pointer;
+    color: #1a6692;
+    border: 1px solid #1a6692;
+    background: transparent;
+  }
+
+  /* ----------------stats section----------------- */
+
+  .stats_flexbox {
+    flex-direction: column;
+  }
+
+  .stats_content {
+    width: 100%;
+    padding-right: 0;
+  }
+  .stats_content h2 {
+    font-size: 25px;
+  }
+
+  .stats_img {
+    min-width: 50%;
+    max-width: 50%;
+    height: 45vh;
+    margin: auto;
+  }
+
+  .stats_img img {
+    padding: 30px 15px;
+  }
+
+  .stats_vertical_section {
+    flex-direction: row;
+  }
+}
+
+@media (max-width: 500px) {
+  /* ---------------------Footer-------------------- */
+  .footer_follow_section div span i {
+    margin: 5px 10px 5px 0;
+  }
+
+  .footer_address_section {
+    width: 100%;
+    margin-top: 25px;
+  }
+  .footer_address_section p {
+    padding: 0 15px;
+    font-size: 21px;
+  }
+
+  .footer_copyright {
+    padding: 15px 0;
+    font-size: 16px;
+    line-height: 19px;
+    /* border-top: 1px solid #1a6692; */
+  }
+
+  /* ------------------------- index page-------------------- */
+  /* -------------------Welcome to our compnay------------------- */
+
+  .hero_image {
+    height: 50vh;
+  }
+
+  .hero_image img {
+    height: 50vh;
+  }
+
+  .hero_content h2 {
+    font-size: 38px;
+    width: 90%;
+    line-height: 44px;
+  }
+
+  .hero_content span {
+    font-size: 38px;
+    line-height: 44px;
+  }
+
+  /* -------------------Our Company Section----------------- */
+
+  .our_company_img img {
+    width: 100%;
+    height: 220px;
+  }
+  /*  ---------apply for a job section--------- */
+
+  .apply_work_img img {
+    width: 100%;
+    height: 220px;
+  }
+  /* ----------meet team section-------- */
+
+  .meet_team_img img {
+    width: 100%;
+    height: 220px;
+  }
+  /* ------------------------(OUR TEAM PAGE)-------------------------- */
+  /* <!-- ----------------Team Members Section------------------ --> */
+  .team_member_img_odd {
+    min-width: 170px;
+    height: 26vh;
+  }
+
+  .team_member_img_even {
+    min-width: 170px;
+    height: 26vh;
+  }
+
+  /* ----------------CONTTACT US PAGE----------------- */
+  /* ----------Our Location Section------------  */
+
+  .ourlocation_heading h2 {
+    font-size: 25px;
+    line-height: 28px;
+  }
+
+  .ourlocation_content {
+    width: 100%;
+    padding: 0 0 0 0;
+  }
+
+  .ourlocation_section {
+    padding: 60px 0 0 0;
+    width: 80%;
+  }
+
+  .ourlocation_flexbox {
+    flex-direction: column;
+  }
+
+  .ourlocation_map_container {
+    width: 100%;
+    height: 300px;
+  }
+
+  /* -------------Send Us Message------------ */
+  .sendmessage_heading h2 {
+    font-size: 25px;
+    line-height: 28px;
+  }
+  .form_section {
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  /*------------------ about Us ---------------- */
+  /* ---------About Us Section----------- */
+
+  .about_flexbox_right div {
+    height: 200px;
+    clip-path: none;
+  }
+  /* --------------Company statistics section */
+  .stats_img {
+    min-width: 100%;
+    max-width: 100%;
+    height: 45vh;
+    margin: auto;
+  }
+  .stats_vertical_section {
+    flex-direction: column;
+  }
+}

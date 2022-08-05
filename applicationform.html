@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Application Form</title>
+    <link rel="stylesheet" href="./styling/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <!-- application form section -->
+    <div class="job_application_section">
+      <h2>Job/Course Application Form</h2>
+      <div class="form_section">
+        <form action="">
+          <label> First Name</label>
+          <input type="text" placeholder="First Name" />
+
+          <label>Last Name</label>
+          <input type="text" placeholder="Last Name" />
+
+          <label>E-mail</label>
+          <input type="text" placeholder="E-mail" />
+
+          <label>Mobile Number</label>
+          <input type="text" placeholder="Mobile Number" />
+
+          <label for="cars">Select Course/Job</label>
+          <select id="cars" name="cars">
+            <option selected>Select Your Interest</option>
+            <option>C++</option>
+            <option>Javascript</option>
+            <option>Python</option>
+          </select>
+
+          <label for="cars">Upload CV</label>
+          <input type="file" id="myFile" name="filename" />
+
+          <label for="cars">Upload Coverletter</label>
+          <input type="file" id="myFile" name="filename" />
+
+          <div class="checkbox_input">
+            <input type="checkbox" />
+            <p class="checkbox_label">
+              I agree for my data to be stored and processed by Hot Beans for
+              the purpose of this job application process
+            </p>
+          </div>
+          <div class="form_btns">
+            <div class="send_btn">Submit</div>
+            <div class="close_btn">
+              <a href="/index.html">Close</a>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
